@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --bg: #FFFFFF;
+    --text: #212121;
+    --green: #17CE92;
+    --green-active: #06B47B;
+    --secondary: #F5F5F5;
+    --text-secondary: #9E9E9E;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+
+    width: 100vw;
+    height: 100dvh;
+
+    padding: 0;
+    margin: 0;
+}
+
+.green-shadow {
+    box-shadow: 4px 8px 24px 0 rgba(23, 206, 146, 0.25);
+}
