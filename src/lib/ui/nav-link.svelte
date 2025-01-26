@@ -1,27 +1,26 @@
 <script lang="ts">
 let {
-    src,
     text,
-    link,
     isActive
 } = $props();
+
+const icon =
+    text === "Chat" ? "icons/chat.svg" :
+    text === "AI Assistants" ? "icons/category.svg" :
+    text === "History" ? "icons/time-circle.svg" :
+    "icons/profile.svg";
 </script>
 
-<a href={link} class="
-    flex flex-col gap-1 items-center cursor-pointer
-    w-full h-full max-w-[80px] lg:max-w-[100px] max-h-[60px]
-    duration-200 {isActive ? "text-[--green]" : ""}
-">
-
+<div class="
+    flex flex-col items-center gap-1 rounded-xl
+    text-[10px] hover:bg-[#eeeeee90]
+    py-2 px-4 lg:py-3 lg:px-6 duration-200 cursor-pointer
+    lg:w-[80px] {isActive ? "text-[--green]" : "text-[#9E9E9E]"}
+    ">
     <img
-        class="duration-200"
-        alt="cha"
-        src={
-        isActive
-            ? src.slice(0, -4) + "-Active.svg"
-            : src
-        }
-    />
-
+        class="w-6 h-6"
+        src={isActive ? icon.slice(0,-4) + "-active.svg" : icon}
+        alt=""
+        />
     <p>{text}</p>
-</a>
+</div>

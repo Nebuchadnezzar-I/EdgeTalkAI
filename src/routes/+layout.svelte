@@ -1,16 +1,18 @@
 <script lang="ts">
+import Navigation from '$lib/utility/navigation.svelte';
+import Title from '$lib/utility/title.svelte';
 import '../app.css';
-import Nav from "$lib/nav.svelte";
-let { children } = $props();
+let {
+    children
+} = $props();
 </script>
 
-<div class="w-full h-full flex flex-col lg:flex-row">
-    <div class="
-        w-full h-full order-1 lg:order-2
-        lg:py-[40px]
-    ">
-        {@render children()}
+<div class="flex flex-col lg:flex-row w-full h-full">
+    <div class="flex flex-col w-full h-full lg:order-2">
+        <Title />
+        <div class="p-3 h-full">
+            {@render children()}
+        </div>
     </div>
-
-    <Nav />
+    <Navigation />
 </div>
