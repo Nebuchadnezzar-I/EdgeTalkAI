@@ -1,23 +1,20 @@
 <script lang="ts">
-import Nav from '$lib/ui/nav.svelte';
-import Title from '$lib/ui/title.svelte';
-import '../app.css';
+	let { children } = $props();
+	import Navigation from '$lib/nav/navigation.svelte';
+	import Title from '$lib/nav/title.svelte';
 
-let {
-    children
-} = $props();
+	import '../app.css';
 </script>
 
-<div class="
-    w-full h-full flex
-    flex-col lg:flex-row
-    ">
-    <div class="
-        w-full h-full flex flex-col
-        lg:order-2
-        ">
-        <Title />
-        {@render children()}
-    </div>
-    <Nav />
+<div
+	class="
+    flex h-full w-full flex-col pb-4 lg:flex-row
+	lg:pb-0
+    "
+>
+	<div class="flex h-full w-full flex-col lg:order-1">
+		<Title />
+		{@render children()}
+	</div>
+	<Navigation />
 </div>

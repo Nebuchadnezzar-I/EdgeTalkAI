@@ -1,0 +1,14 @@
+{
+	"name": "EdgeTalk",
+	"description": "Learn to negotiation using AI.",
+	"display": "standalone",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "logo-big.svg",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	]
+}

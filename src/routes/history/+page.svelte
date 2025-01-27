@@ -1,28 +1,37 @@
 <script>
-import PagePadding from "$lib/layout/page-padding.svelte";
-import Item from "$lib/util/history/item.svelte";
+	import RecordItem from '$lib/aux/record-item.svelte';
+	import PagePadding from '$lib/layout/page-padding.svelte';
 </script>
 
 <PagePadding>
-    <div class="
-        w-full h-full flex items-center lg:justify-center
-        ">
-        <div class="
-            flex flex-col gap-3 w-full max-w-[900px] content-max-h
-            h-full overflow-y-auto pr-2 lg:max-h-[700px]
-            ">
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-        </div>
-    </div>
+	<div
+		class="
+		flex h-full
+		w-full lg:items-center lg:justify-center
+	"
+	>
+		<div
+			class="scroll-content flex h-full w-full flex-col gap-1 overflow-auto lg:max-h-[600px] lg:max-w-[800px] lg:gap-2 lg:pr-2"
+		>
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+			<RecordItem />
+		</div>
+	</div>
 </PagePadding>

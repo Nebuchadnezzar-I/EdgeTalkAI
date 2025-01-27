@@ -1,19 +1,20 @@
 <script>
-import PagePadding from "$lib/layout/page-padding.svelte";
-import Card from "$lib/util/assistants/card.svelte";
+	import AppLink from '$lib/aux/app-link.svelte';
+	import PagePadding from '$lib/layout/page-padding.svelte';
 </script>
 
 <PagePadding>
-    <div class="
-        w-full h-full flex lg:items-center justify-center
-        ">
-        <div class="grid grid-cols-2 gap-3 h-min w-full max-w-[900px]">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-        </div>
-    </div>
+	<div
+		class="
+		flex h-full
+		w-full lg:items-center lg:justify-center
+	"
+	>
+		<div class="grid h-min w-full max-w-[800px] grid-cols-2 gap-3">
+			<AppLink />
+			<AppLink />
+			<AppLink />
+			<AppLink />
+		</div>
+	</div>
 </PagePadding>

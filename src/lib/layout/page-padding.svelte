@@ -1,3 +1,3 @@
-<div class="p-3 w-full h-full overflow-hidden">
-    <slot></slot>
+<div class="h-full w-full overflow-hidden p-3">
+	<slot></slot>
 </div>

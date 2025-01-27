@@ -1,33 +1,34 @@
 <script>
-import PagePadding from "$lib/layout/page-padding.svelte";
-import IdentityCard from "$lib/util/account/identity-card.svelte";
-	import Link from "$lib/util/account/link.svelte";
+	import IdentifyCard from '$lib/aux/identify-card.svelte';
+	import Link from '$lib/aux/link.svelte';
+	import PagePadding from '$lib/layout/page-padding.svelte';
 </script>
 
 <PagePadding>
-    <div class="
-        w-full h-full flex lg:items-center justify-center
-        ">
-        <div class="flex flex-col gap-3 h-min w-full max-w-[900px]">
-            <IdentityCard />
+	<div
+		class="
+		flex h-full
+		w-full lg:items-center lg:justify-center
+	"
+	>
+		<div class="flex w-full flex-col gap-1 lg:max-w-[800px] lg:gap-2">
+			<IdentifyCard />
 
-            <div class="
-                divider divider-start text-[14px] text-[#9E9E9E]
-            ">General</div>
+			<Link text="Personal Info" />
+			<Link text="Security" />
+			<Link text="Language" />
+			<Link text="Dark Mode" />
 
-            <Link />
-            <Link />
-            <Link />
-            <Link />
+			<div
+				class="divider divider-start px-4 text-[14px] text-[--text-secondary]"
+			>
+				Default
+			</div>
 
-            <div class="
-                divider divider-start text-[14px] text-[#9E9E9E]
-            ">About</div>
-
-            <Link />
-            <Link />
-            <Link />
-            <Link />
-        </div>
-    </div>
+			<Link text="Help Center" />
+			<Link text="Privacy Policy" />
+			<Link text="About ChattyAI" />
+			<Link text="Logout" />
+		</div>
+	</div>
 </PagePadding>
