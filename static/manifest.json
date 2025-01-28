@@ -5,10 +5,19 @@
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "logo-big.svg",
+			"src": "/logo-big.svg",
 			"sizes": "512x512",
-			"type": "image/png",
-			"purpose": "any maskable"
+			"type": "image/svg+xml"
+		},
+		{
+			"src": "/logo-small.svg",
+			"sizes": "32x32",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "/apple-touch-icon.png",
+			"sizes": "180x180",
+			"type": "image/png"
 		}
 	]
 }
