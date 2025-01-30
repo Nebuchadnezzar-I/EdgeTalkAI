@@ -1,6 +1,14 @@
 <script>
 	import IdentifyCard from '$lib/aux/identify-card.svelte';
-	import Link from '$lib/aux/link.svelte';
+	import Subscription from '$lib/aux/subscription.svelte';
+	import DocumentIcon from '$lib/icon/base/document-icon.svelte';
+	import InfoSquareIcon from '$lib/icon/base/info-square-icon.svelte';
+	import LockIcon from '$lib/icon/base/lock-icon.svelte';
+	import LogoutIcon from '$lib/icon/base/logout-icon.svelte';
+	import PaperIcon from '$lib/icon/base/paper-icon.svelte';
+	import ShieldDoneIcon from '$lib/icon/base/shield-done-icon.svelte';
+	import ShowIcon from '$lib/icon/base/show-icon.svelte';
+	import ProfileIcon from '$lib/icon/profile-icon.svelte';
 	import PagePadding from '$lib/layout/page-padding.svelte';
 </script>
 
@@ -14,17 +22,51 @@
 		<div class="flex w-full flex-col gap-1 lg:max-w-[800px] lg:gap-2">
 			<IdentifyCard />
 
-			<Link img="icons/profile.svg" text="Personal Info" />
-			<Link img="icons/shield-done.svg" text="Security" />
-			<Link img="icons/document.svg" text="Language" />
-			<Link img="icons/show.svg" text="Dark Mode" />
+			<Subscription />
+			
+			<a href="/personal" class="btn btn-ghost w-full justify-start gap-3">
+				<ProfileIcon />
+				Personal Info
+			</a>
 
-			<div class="divider divider-start px-4 text-[14px] text-[--text-secondary]">Default</div>
+			<a href="/security" class="btn btn-ghost w-full justify-start gap-3">
+				<ShieldDoneIcon />
+				Security
+			</a>
 
-			<Link img="icons/paper.svg" text="Help Center" />
-			<Link img="icons/lock.svg" text="Privacy Policy" />
-			<Link img="icons/info-square.svg" text="About ChattyAI" />
-			<Link img="icons/logout.svg" text="Logout" />
+			<a href="/language" class="btn btn-ghost w-full justify-start gap-3">
+				<PaperIcon />
+				Language
+			</a>
+
+			<a href="/theme" class="btn btn-ghost w-full justify-start gap-3">
+				<ShowIcon />
+				Theme
+			</a>
+
+			<!-- <Lang /> -->
+
+			<div class="divider divider-start px-4 text-[14px]">About</div>
+
+            <a href="/help" class="btn btn-ghost w-full justify-start gap-3">
+				<DocumentIcon />
+				Help Center
+			</a>
+
+            <a href="/privacy-policy" class="btn btn-ghost w-full justify-start gap-3">
+				<LockIcon />
+				Privacy Policy
+			</a>
+
+            <a href="/about" class="btn btn-ghost w-full justify-start gap-3">
+				<InfoSquareIcon />
+				About ChattyAI
+			</a>
+
+            <a href="/logout" class="btn btn-ghost w-full justify-start gap-3">
+				<LogoutIcon />
+				Logout
+			</a>
 		</div>
 	</div>
 </PagePadding>

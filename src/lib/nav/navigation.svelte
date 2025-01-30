@@ -1,10 +1,13 @@
 <script lang="ts">
-	import NavLink from './nav-link.svelte';
 	import { onNavigate } from '$app/navigation';
+	import CategoryIcon from '$lib/icon/category-icon.svelte';
+	import ChatIcon from '$lib/icon/chat-icon.svelte';
+	import ProfileIcon from '$lib/icon/profile-icon.svelte';
+	import TimeCircleIcon from '$lib/icon/time-circle-icon.svelte';
 	import { onMount } from 'svelte';
 
-	let cp /* Current page */ = $state<string>();
-	let ih /* Is nav hidden */ = $state<string>();
+	let cp /* Current page */ = $state<string>('');
+	let ih /* Is nav hidden */ = $state<string>('');
 
 	onMount(() => {
 		cp = window.location.pathname;
@@ -15,43 +18,35 @@
 		cp = window.location.pathname;
 		ih = cp === '/chat' && window.screen.width < 700 ? 'hidden' : '';
 	});
+
+	function getClassName(path: string) {
+		return `
+		btn btn-ghost h-auto
+		flex-col gap-2 py-2 lg:w-[80px]
+		text-[10px] lg:text-[14px] px-5 lg:px-0
+		${cp === path ? 'font-medium' : 'font-light'}
+	`;
+	}
 </script>
 
-<div
-	class="
-    flex w-full items-center justify-center gap-3
-    p-3 lg:w-fit lg:flex-col {ih}
-    "
->
-	<NavLink
-		iconBaseName="chat"
-		isActive={'/chat' === cp}
-		link="/chat"
-		className={ih}
-		text="Chat"
-	/>
+<div class="flex w-full items-center justify-center gap-3 p-3 lg:w-fit lg:flex-col {ih}">
+	<a href="/assistants" class={getClassName('/assistants')}>
+		<CategoryIcon isActive={cp === '/assistants'} />
+		<p>New</p>
+	</a>
 
-	<NavLink
-		iconBaseName="category"
-		isActive={'/assistants' === cp}
-		link="/assistants"
-		className={ih}
-		text="AI Assistants"
-	/>
+	<a href="/chat" class={getClassName('/chat')}>
+		<ChatIcon isActive={cp === '/chat'} />
+		<p>Ongoing</p>
+	</a>
 
-	<NavLink
-		iconBaseName="time-circle"
-		isActive={'/history' === cp}
-		link="/history"
-		className={ih}
-		text="History"
-	/>
+	<a href="/history" class={getClassName('/history')}>
+		<TimeCircleIcon isActive={cp === '/history'} />
+		<p>Closed</p>
+	</a>
 
-	<NavLink
-		iconBaseName="profile"
-		isActive={'/account' === cp}
-		link="/account"
-		className={ih}
-		text="Account"
-	/>
+	<a href="/account" class={getClassName('/account')}>
+		<ProfileIcon isActive={cp === '/account'} />
+		<p>Accout</p>
+	</a>
 </div>

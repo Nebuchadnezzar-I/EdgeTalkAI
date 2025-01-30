@@ -19,3 +19,11 @@ body {
 .scroll-content {
 	max-height: calc(100dvh - 1rem - 84px - 60px - 0.75rem * 3);
 }
+
+.scroll-content-2 {
+	max-height: calc(100dvh - 1rem - 84px - 60px - 0.75rem * 4);
+}
+
+svg {
+	@apply fill-current;
+}
