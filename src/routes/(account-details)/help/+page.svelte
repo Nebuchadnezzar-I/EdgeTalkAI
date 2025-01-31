@@ -1,5 +1,11 @@
 <script lang="ts">
 	import SearchIcon from '$lib/icon/base/search-icon.svelte';
+	import FacebookIcon from '$lib/icon/brand/facebook-icon.svelte';
+	import HeadphonesIcon from '$lib/icon/brand/headphones-icon.svelte';
+	import InstagramIcon from '$lib/icon/brand/instagram-icon.svelte';
+	import TwitterIcon from '$lib/icon/brand/twitter-icon.svelte';
+	import WebIcon from '$lib/icon/brand/web-icon.svelte';
+	import WhatsappIcon from '$lib/icon/brand/whatsapp-icon.svelte';
 	import PagePadding from '$lib/layout/page-padding.svelte';
 
 	type SlideState = 'faq' | 'cu';
@@ -39,10 +45,11 @@
 	<div class="flex h-full w-full lg:items-center lg:justify-center">
 		<div
 			class="
-            scroll-content-2 flex
-            h-full w-full flex-col gap-3 overflow-auto
-            pr-1 lg:max-h-[600px]
-            lg:max-w-[800px] lg:gap-2 lg:pr-2
+            scroll-content-2 overflow-auto
+            flex flex-col gap-3
+            h-full w-full text-sm
+            lg:max-h-[600px] lg:max-w-[800px]
+            pr-1 lg:gap-2 lg:pr-2
             "
 		>
 			<div class="flex w-full text-center">
@@ -69,12 +76,26 @@
 
 			{#if currentSlide === 'cu'}
 				<div class="flex flex-col gap-3">
-					<button class="btn btn-outline justify-start">Contact us</button>
-                    <button class="btn btn-outline justify-start">WhatsApp</button>
-                    <button class="btn btn-outline justify-start">Instagram</button>
-                    <button class="btn btn-outline justify-start">Facebook</button>
-                    <button class="btn btn-outline justify-start">Twitter</button>
-                    <button class="btn btn-outline justify-start">Website</button>
+					<button class="btn btn-ghost justify-start">
+						<HeadphonesIcon svgClass="w-4 h-4" />
+						Contact us
+					</button>
+					<button class="btn btn-ghost justify-start">
+						<WhatsappIcon svgClass="w-4 h-4" />
+						WhatsApp
+					</button>
+					<button class="btn btn-ghost justify-start">
+						<InstagramIcon svgClass="w-4 h-4" />
+						Instagram
+					</button>
+					<button class="btn btn-ghost justify-start">
+						<FacebookIcon svgClass="w-4 h-4" />
+						Facebook
+					</button>
+					<button class="btn btn-ghost justify-start">
+						<TwitterIcon svgClass="w-4 h-4" />
+						Twitter
+					</button>
 				</div>
 			{/if}
 

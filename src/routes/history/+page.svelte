@@ -6,18 +6,25 @@
 <PagePadding>
 	<div class="flex h-full w-full lg:items-center lg:justify-center">
 		<div
-			class="scroll-content flex h-full w-full flex-col gap-1 overflow-auto lg:max-h-[600px] lg:max-w-[800px] lg:gap-2 lg:pr-2"
+			class="
+            flex h-full w-full flex-col
+            gap-3 overflow-auto
+            text-sm lg:max-h-[600px]
+            lg:max-w-[800px] lg:gap-2
+            "
 		>
-			{#each { length: 30 } as _, i}
-				<div class="btn btn-ghost flex h-auto justify-between p-4">
-					<div class="flex flex-col gap-3 text-left">
-						<h3 class="text-[18px] font-semibold">I weigh 70 kg, I want a diet plan to ...</h3>
-						<p class="text-[10px] font-normal">29 Dec 2023 - 09:41 AM</p>
-					</div>
+			<div class="flex h-full w-full flex-col overflow-auto scroll-content-2 gap-2 pr-2">
+				{#each { length: 30 } as _, i}
+					<div class="btn btn-ghost flex h-min justify-between p-3 px-6">
+						<div class="flex flex-col gap-3 text-left">
+							<h3 class="text-[18px] font-semibold">I weigh 70 kg, I want a diet plan to ...</h3>
+							<p class="text-[10px] font-normal">29 Dec 2023 - 09:41 AM</p>
+						</div>
 
-					<ArrowIcon />
-				</div>
-			{/each}
+						<ArrowIcon />
+					</div>
+				{/each}
+			</div>
 		</div>
 	</div>
 </PagePadding>

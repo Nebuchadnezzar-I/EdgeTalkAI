@@ -43,13 +43,12 @@
 	<div class="flex h-full w-full lg:items-center lg:justify-center">
 		<div
 			class="
-            scroll-content grid
-            h-full min-h-96
-            w-full grid-cols-2 gap-1
-            overflow-auto lg:max-h-[600px]
-            lg:max-w-[800px] lg:grid-cols-4 lg:gap-2
-            lg:pr-2
-        "
+            scroll-content-2 grid
+            h-full w-full grid-cols-2 lg:grid-cols-4
+            gap-3 overflow-auto pr-1
+            text-sm lg:max-h-[600px]
+            lg:max-w-[800px] lg:gap-2 lg:pr-2
+            "
 		>
 			<Acid SetTheme={setTheme} />
 			<Aqua SetTheme={setTheme} />

@@ -21,9 +21,9 @@
 
 	function getClassName(path: string) {
 		return `
-		btn btn-ghost h-auto
-		flex-col gap-2 py-2 lg:w-[80px]
-		text-[10px] lg:text-[14px] px-5 lg:px-0
+		flex items-center
+		flex-col py-2 lg:w-[80px]
+		text-[10px] lg:text-[14px] px-3 lg:px-0
 		${cp === path ? 'font-medium' : 'font-light'}
 	`;
 	}
@@ -31,22 +31,30 @@
 
 <div class="flex w-full items-center justify-center gap-3 p-3 lg:w-fit lg:flex-col {ih}">
 	<a href="/assistants" class={getClassName('/assistants')}>
-		<CategoryIcon isActive={cp === '/assistants'} />
+		<div class="btn btn-ghost h-auto">
+			<CategoryIcon isActive={cp === '/assistants'} />
+		</div>
 		<p>New</p>
 	</a>
 
 	<a href="/chat" class={getClassName('/chat')}>
-		<ChatIcon isActive={cp === '/chat'} />
+		<div class="btn btn-ghost h-auto">
+			<ChatIcon isActive={cp === '/chat'} />
+		</div>
 		<p>Ongoing</p>
 	</a>
 
 	<a href="/history" class={getClassName('/history')}>
-		<TimeCircleIcon isActive={cp === '/history'} />
+		<div class="btn btn-ghost h-auto">
+			<TimeCircleIcon isActive={cp === '/history'} />
+		</div>
 		<p>Closed</p>
 	</a>
 
 	<a href="/account" class={getClassName('/account')}>
-		<ProfileIcon isActive={cp === '/account'} />
+		<div class="btn btn-ghost h-auto">
+			<ProfileIcon isActive={cp === '/account'} />
+		</div>
 		<p>Accout</p>
 	</a>
 </div>

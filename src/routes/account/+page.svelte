@@ -23,7 +23,7 @@
 			<IdentifyCard />
 
 			<Subscription />
-			
+
 			<a href="/personal" class="btn btn-ghost w-full justify-start gap-3">
 				<ProfileIcon />
 				Personal Info
@@ -48,22 +48,22 @@
 
 			<div class="divider divider-start px-4 text-[14px]">About</div>
 
-            <a href="/help" class="btn btn-ghost w-full justify-start gap-3">
+			<a href="/help" class="btn btn-ghost w-full justify-start gap-3">
 				<DocumentIcon />
 				Help Center
 			</a>
 
-            <a href="/privacy-policy" class="btn btn-ghost w-full justify-start gap-3">
+			<a href="/privacy-policy" class="btn btn-ghost w-full justify-start gap-3">
 				<LockIcon />
 				Privacy Policy
 			</a>
 
-            <a href="/about" class="btn btn-ghost w-full justify-start gap-3">
+			<a href="/about" class="btn btn-ghost w-full justify-start gap-3">
 				<InfoSquareIcon />
 				About ChattyAI
 			</a>
 
-            <a href="/logout" class="btn btn-ghost w-full justify-start gap-3">
+			<a href="/" class="btn btn-ghost w-full justify-start gap-3">
 				<LogoutIcon />
 				Logout
 			</a>

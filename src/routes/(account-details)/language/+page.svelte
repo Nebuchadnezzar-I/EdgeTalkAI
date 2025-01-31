@@ -148,10 +148,11 @@
 	<div class="flex h-full w-full lg:items-center lg:justify-center">
 		<div
 			class="
-            scroll-content flex
-            h-full w-full flex-col items-center
-            gap-1 overflow-auto
-            lg:max-h-[600px] lg:max-w-[800px] lg:gap-2 lg:pr-2
+            scroll-content-2 overflow-auto
+            flex flex-col gap-3
+            h-full w-full text-sm
+            lg:max-h-[600px] lg:max-w-[800px]
+            pr-1 lg:gap-2 lg:pr-2
             "
 		>
 			<div class="divider divider-start opacity-60">Suggested</div>
